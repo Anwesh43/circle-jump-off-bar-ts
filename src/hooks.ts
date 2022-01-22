@@ -60,7 +60,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
             const shift : number = (2 * i - 1) * (w / 2 - size / 2) * sf
             const width = `${size / 2}px`
             const height = `${size}px`
-            const left = `${w / 2 - size / 2 + size * i + shift}px`
+            const left = `${w / 2 - size / 2 + size * 0.5 * i + shift}px`
             const top = `${h - size}px`
             return {
                 position,
@@ -73,7 +73,7 @@ export const useStyle = (w : number, h : number, scale : number) => {
         },
         circleStyle() : CSSProperties {
             const left = `${w / 2 - circleSize / 2}px`
-            const top = `${(h - size) * (1  - sf)}px`
+            const top = `${(h - size - circleSize) * (1  - sf)}px`
             const width = `${circleSize}px`
             const height = `${circleSize}px`
             const borderRadius = `50%`
